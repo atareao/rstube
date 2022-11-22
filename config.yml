@@ -1,0 +1,6 @@
+log_level: debug
+port: 8080
+users:
+  - username: lorenzo
+    password: 3334703c735bd09f54c377b4dfaac1c3
+    active: true
