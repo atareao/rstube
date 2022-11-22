@@ -42,6 +42,7 @@ async fn main() -> std::io::Result<()> {
             process::exit(1);
         }
     };
+    debug!("{:?}", template);
 
     let conf = configuration.clone();
     HttpServer::new(move || {
@@ -53,6 +54,7 @@ async fn main() -> std::io::Result<()> {
             //.service(routes::get_form)
             //.service(routes::post_form)
             .service(routes::index)
+            .service(routes::download)
             .service(actix_files::Files::new("/static", "./static"))
     })
     .workers(4)
