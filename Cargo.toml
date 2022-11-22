@@ -27,3 +27,4 @@ actix-rt = "2.7"
 openssl = { version = "0.10", features = ["vendored"] }
 tera  = "1.17"
 md5 = "0.7"
+regex = "1"
