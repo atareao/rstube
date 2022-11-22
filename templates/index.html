@@ -11,15 +11,13 @@
             {% if instructions != "" %}
             <p>{{ instructions }}</p>
             {% endif %}
-            <form action="/{{ table }}" method="post">
+            <form action="/" method="post">
                 <div>
-                    {% for field in fields %}
-                    <label for name="{{ field.name }}">
-                        {{ field.label }}
-                        <input type="{{ field.datatype }}" id="{{ field.name}}" name="{{ field.name }}" placeholder="{{ field.placeholder }}" {% if field.required %} required {% endif %}>
+                    <label for name="yturl">
+                        Introduce la url del vídeo
+                        <input type="url" id="yturl" name="yturl" placeholder="Aquí va la url" required>
                     </label>
-                    {% endfor %}
-                    <p><input type="submit" value="Submit"></p>
+                    <p><input type="submit" value="Descargar"></p>
                 </div>
             </form>
         </main>
